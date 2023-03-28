@@ -30,8 +30,8 @@ const assertEqual1 = function(actual, expected) {
 };
 
 // TEST CODE
-console.log(assertEqual1("Lighthouse Labs", "Bootcamp"));               // change the test code by putting console.logging it and at the same time calling it
-console.log(assertEqual1(1, 1));                                         // in this code -> you can use return because of the test code explanation above this
-console.log(assertEqual("JavaScript", "JavaScript"));
-console.log(assertEqual(2, 1));
+console.log(assertEqual1("Lighthouse", "JavaScript"));               // change the test code by putting console.logging it and at the same time calling it
+console.log(assertEqual1(5, 5));                                         // in this code -> you can use return because of the test code explanation above this
+console.log(assertEqual1("Bootcamp", "Bootcamp"));
+console.log(assertEqual1(2, 5));
                                                   
