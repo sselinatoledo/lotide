@@ -1,22 +1,29 @@
-const eqArrays = function(arr1, arr2) {
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
+const eqArrays = function(array1, array2) {
+  if (array1.length !== array2.length) {
+    return false
+  }
+  for (var i = 0; i < array1.length; i++) {
+    if (array1[i] !== array2[i]) {
+      return false
     }
   }
-  return true;
-};
+  return true
+}
 
-const assertArraysEqual = function(arr1, arr2) {
-  if (eqArrays(arr1, arr2)) {
-    console.log(`✅✅✅ Assertion Passed: [${arr1}] === [${arr2}]`);
+// implement assertArraysEqual function
+// take in 2 arrays
+// console.log appropriate message to the console
+const assertArraysEqual = function(array1, array2) {
+  if (eqArrays(array1, array2)) {
+    console.log(`✅✅✅ Assertion Passed: ${array1} === ${array2}`)
   } else {
-    console.log(`🛑🛑🛑 Assertion Failed: [${arr1}] !== [${arr2}]`);
-  }
-};
+    console.log(`🛑🛑🛑 Assertion Failed: ${array1} !== ${array2}`)
+}
+}
 
-console.log(assertArraysEqual([], []));
-console.log(assertArraysEqual([1, 2, 3], [1, 2, 3])); // => true
-console.log(assertArraysEqual([1, 2, 3], [3, 2, 1])); // => false
-console.log(assertArraysEqual(["1", "2", "3"], ["1", "2", "3"])); // => true
-console.log(assertArraysEqual(["1", "2", "3"], ["1", "2", 3])); // => false
+
+// Test Code
+assertArraysEqual([1, 2, 3], [1, 2, 3]) 
+assertArraysEqual([1, 2, 3], [3, 2, 1])
+assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]) 
+assertArraysEqual(["1", "2", "3"], ["1", "2", 3]) 
