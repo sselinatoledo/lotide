@@ -15,3 +15,6 @@ const head = function(actual) {
 // TEST CODE
 assertEqual(head([5,6,7]), 5)
 assertEqual(head(["Hello", "Lighthosue", "Labs"]), "Hello");
+
+// assertEqual here means if it is true then assertion passed
+// Otherwise assertion failed 
