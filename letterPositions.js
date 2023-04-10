@@ -26,7 +26,7 @@ const letterPositions = function(sentence) {
     // create a for loop that repeat through each index(letter) of the string(sentence).
     for (let letter = 0; letter < sentence.length; letter++) {
       // check if the current index is a space. sentence[letter] is accessing the element.
-      if(sentence[letter] === " ") {
+      if (sentence[letter] === " ") {
         // if it is, skip and continue to the next index.
         continue;
       }

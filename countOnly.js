@@ -1,4 +1,4 @@
-const assertEqual = function(actual, expected) {                          // function called assertEqual
+const assertEqual = function(actual, expected) {
   if (actual !== expected) {
     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
   } else {
@@ -6,26 +6,49 @@ const assertEqual = function(actual, expected) {                          // fun
   }
 };
 
-// allItems: an array of strings that we need to look through
-// itemsToCount: an object specifying what to count 
+// this function should take in a collection of items => array
+// return counts for a specific subset of those items => object
 
-const countOnly = function(allItems, itemsToCount) {      // 1. make a function that will have a parameter of an aray of strings and an object specififes the counnt of the strings
-  const results = {}                                     // 5. make a buffer(temporarily used store data)
-  for (item of allItems) {                              // 7. Make a for of loop to access the allItems => the elements of the array => firstNames array
-    //console.log(item);                               // 8. this is to check the loop if it accessing
-    if (itemsToCount[item]) {                          // 9. outer if to access the 2nd parameter if it is true then go to the inner if, if it is false then go back to the result
-    if (results[item]) {                              // 10. inner if to increment the name if it has repeated
-        results[item] = results[item] + 1;
+// it won't count everything
+// In order to decide what to count, it will be given an idea of which items we care about and it will only count those, ignoring the others => conditional 
+
+// array + object = return an object that is truthy value 
+// false in the object and not included in the array is not counted 
+
+// array = allItems 
+// object = itemsToCount 
+
+// 1. cannot read property => make a new empty object and return it
+// equals to undefined 
+
+// 2. for loop
+// to count them all
+
+// 3. if statement
+// set the empty object and index of the array to 1 and increment it to many times it appears
+
+// 4. otherwise
+// set it = to 1 only
+
+// 5. need to add another if because of the false from the object itemsToCount
+
+// SOLUTION 
+const countOnly = function(allItems, itemsToCount) {
+  const result = {}
+  for (var item of allItems) {
+    if (itemsToCount[item]) {
+      if (result[item]) {
+        result[item] += 1
+      } else {
+        result[item] = 1
       }
-      else {                                          // 11. Otherwise, if will only be 1 count
-      results[item] = 1
-      }
+    }
   }
+  return result;
 }
-  return results;                                   // 6. need to return to the buffer
-} 
 
-const firstNames = [                               // 2. this is the inside of the allItems parameter
+// INITIAL TEST CODE 
+const items = [
   "Karl",
   "Salima",
   "Agouhanna",
@@ -34,23 +57,18 @@ const firstNames = [                               // 2. this is the inside of t
   "Jason",
   "Salima",
   "Fang",
-  "Joe",
-];
+  "Joe"
+]
 
-const whatToCount = {                              // 3. this is the inside of the itemsToCount parameter
+const count = {
   "Jason": true,
   "Karima": true,
   "Fang": true,
-  "Agouhanna": false
+  "Agouhana": false
 }
 
-const result1 = countOnly(firstNames, whatToCount)         // 4. this is calling the function 
-
-// TEST CODE
+const result1 = countOnly(items, count)
 assertEqual(result1["Jason"], 1);
 assertEqual(result1["Karima"], undefined);
 assertEqual(result1["Fang"], 2);
 assertEqual(result1["Agouhanna"], undefined);
-
-
-// OUTPUT

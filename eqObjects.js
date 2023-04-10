@@ -1,4 +1,4 @@
-const eqArrays = function(array1, array2) {
+const eqArrays = function (array1, array2) {
   if (array1.length !== array2.length) {
     return false;
   }
@@ -10,7 +10,7 @@ const eqArrays = function(array1, array2) {
   return true;
 };
 
-const assertEqual = function(actual, expected) {
+const assertEqual = function (actual, expected) {
   if (actual !== expected) {
     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
   } else {
@@ -19,7 +19,7 @@ const assertEqual = function(actual, expected) {
 };
 
 // Define a function called eqObjects. that takes in two objects as parameters.
-const eqObjects = function(object1, object2) {
+const eqObjects = function (object1, object2) {
   // Get the keys of the 2 objects. Object.keys() method. STEP 3 PRIMITIVE AS VALUES (IMPLEMENTATION).
   let key1 = Object.keys(object1);
   let key2 = Object.keys(object2);
@@ -29,24 +29,23 @@ const eqObjects = function(object1, object2) {
     return false;
   }
   // next, for in loop through the properties of the object.
-  for (let key in object1) {
+  for (let key in key1) {
     // if both objects have arrays
     if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
-      // call eqArrays function to check if they are not equal 
-      if(!eqArrays(object1, object2)) {
+      // call eqArrays function to check if they are not equal
+      if (!eqArrays(object1[key]!== object2[key])) {
         // return false
-        return false
+        return false;
+        // need to change the if to else if so it will skip if the answer above is true(meaning 2 arrays are equal)
+        // if current index(value) from 2 objects are not equal.
+      } else if (object1[key] !== object2[key]) {
+        // return false
+        return false;
       }
     }
-    // need to change the if to else if so it will skip if the answer above is true(meaning 2 arrays are equal)
-    // if current index(value) from 2 objects are not equal.
-    else if (object1[key] !== object2[key]) {
-      // return false
-      return false;
-    }
+    // if all matches, return true
+    return true;
   }
-  // if all matches, return true
-  return true;
 };
 
 // PRIMITIVE AS VALUES (TESTS)

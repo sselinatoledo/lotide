@@ -14,7 +14,7 @@ const tail = function(actual) {
 
 // TEST CODE
 const result = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(result, ["Lighthouse", "Labs"]); // => will always fail!
+assertEqual(result, ["Lighthouse", "Labs"]); // => will always fail! it is not comparing each value inside the array. you cannot compare the array as whole array. hence, it is always failed!
 
 // Test Case: Check the original array
 const words = ["Yo Yo", "Lighthouse", "Labs"];
