@@ -31,7 +31,6 @@ const bestTVShowsByGenre = {
   drama:  "The Wire"
 }
 
-
 // INITIAL TEST CODE
 console.log(findKeyByValue(bestTVShowsByGenre, "Brooklyn Nine-Nine"))// output: "comedy"
 console.log(findKeyByValue(bestTVShowsByGenre, "The Expanse")) // output: "sci_fi"
