@@ -6,32 +6,13 @@
 // console.assert(sum(1, 20) === 21);
 
 // FUNCTION IMPLEMENTATION
-const assertEqual = function(actual, expected) {                          // function called assertEqual
+const assertEqual = function(actual, expected) {
   if (actual !== expected) {
     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
   } else {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
   }
 };
-
-// TEST CODE
-assertEqual("Lighthouse Labs", "Bootcamp"); //non-identical strings. calling all out the function
-assertEqual(1, 1); //identical numbers
-assertEqual("JavaScript", "JavaScript"); //identical strings
-assertEqual(2, 1); //non-identical numbers
-
-
-// different coding style
-const assertEqual1 = function(actual, expected) {
-  if (actual !== expected) {
-    return `🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`;
-  }
-  return `✅✅✅ Assertion Passed: ${actual} === ${expected}`;
-};
-
-// TEST CODE
-console.log(assertEqual1("Lighthouse", "JavaScript"));               // change the test code by putting console.logging it and at the same time calling it
-console.log(assertEqual1(5, 5));                                         // in this code -> you can use return because of the test code explanation above this
-console.log(assertEqual1("Bootcamp", "Bootcamp"));
-console.log(assertEqual1(2, 5));
+// passing variable assertEqual (which points to our function). And not calling it. 
+module.exports = assertEqual;
                                                   
