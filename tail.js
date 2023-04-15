@@ -1,3 +1,4 @@
+// FUNCTION IMPLEMENTATION
 const tail = function(actual) {
   return actual.slice(1);
 };
