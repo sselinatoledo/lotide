@@ -13,6 +13,6 @@ const assertEqual = function(actual, expected) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
   }
 };
-// passing variable assertEqual (which points to our function). And not calling it. 
+// passing variable assertEqual (which points to our function). And not calling it.
 module.exports = assertEqual;
                                                   
