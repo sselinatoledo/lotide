@@ -1,0 +1,28 @@
+{
+  "name": "lotide",
+  "version": "1.0.0",
+  "description": "lotide project",
+  "main": "assertEqual.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "chai": "^4.3.7"
+  },
+  "devDependencies": {
+    "mocha": "^9.2.2"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sselinatoledo/lotide.git"
+  },
+  "author": "Selina Toledo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sselinatoledo/lotide/issues"
+  },
+  "homepage": "https://github.com/sselinatoledo/lotide#readme"
+}
