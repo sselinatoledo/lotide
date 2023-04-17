@@ -20,9 +20,9 @@ describe('#tail', function() {
   it('should return ["Lighthouse", "Labs"] for ["Hello", "Lighthouse", "Labs"]', function() {
     assert.deepEqual(tail(["Hello", "Lighthouse", "Labs"]), ["Lighthouse", "Labs"]);
   });
-  it('cannot change the original array', function() {
+  it('cannot modify the original array', function() {
     const words = ["Yo Yo", "Lighthouse", "Labs"];
     tail(words);
-    assert.deepEqual(words, (["Yo Yo", "Lighthouse", "Labs"]))
+    assert.deepEqual(words, (["Yo Yo", "Lighthouse", "Labs"]));
   });
 });

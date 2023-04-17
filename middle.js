@@ -1,17 +1,15 @@
 // ACTUAL FUNCTION
-const middle = function (array) {
-  let newArray = []
-  let middleSolution = Math.floor(array.length / 2)
+const middle = function(array) {
+  let newArray = [];
+  let middleSolution = Math.floor(array.length / 2);
   if (array.length <= 2) {
-    return []
+    return [];
+  } else if (array.length % 2 === 0) {
+    newArray = array.slice(middleSolution - 1, middleSolution + 1);
+  } else {
+    newArray.push(array[middleSolution]);
   }
-  else if (array.length % 2 === 0) {
-    newArray = array.slice(middleSolution - 1, middleSolution + 1)
-  }
-    else {
-  newArray.push(array[middleSolution])
-}
-return newArray
-}
+  return newArray;
+};
 module.exports = middle;
 
