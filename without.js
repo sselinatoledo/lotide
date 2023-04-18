@@ -6,6 +6,6 @@ const without = function(source, itemsToRemove) {
       newArray.push(source[i]);
     }
   }
-  console.log(newArray);
+  return(newArray);
 };
 module.exports = without;
