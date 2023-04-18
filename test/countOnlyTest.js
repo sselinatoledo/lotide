@@ -32,7 +32,7 @@ const countOnly = require('../countOnly');
 // MOCHA AND CHAI TESTING
 //describe countOnly function using describe function
 describe("countOnly function", () => {
-  it("returns Jason: 1 === 1 && Fang: 2 === 2", () => {
+  it("returns Jason: 1 === 1 && Fang: 2 === 2", function() {
     const items = [
       "Karl",
       "Salima",
@@ -44,11 +44,15 @@ describe("countOnly function", () => {
       "Fang",
       "Joe"
     ];
-    const result = countOnly(items, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
+    const result = countOnly(items, { 
+      "Jason": true, 
+      "Karima": true, 
+      "Fang": true, 
+      "Agouhanna": false });
     assert.deepEqual(result["Jason"], 1);
     assert.deepEqual(result["Fang"], 2)
   });
-  it("returns Karima: undefined === undefined && Agouhana: undefined === undefined", () => {
+  it("returns Karima: undefined === undefined && Agouhana: undefined === undefined", function() {
     const items = [
       "Karl",
       "Salima",
@@ -60,8 +64,12 @@ describe("countOnly function", () => {
       "Fang",
       "Joe"
     ];
-    const result =  countOnly(items, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
-    assert.deepEqual(result["Karima"], undefined);
-    assert.deepEqual(result["Agouhana"], undefined);
+    const result1 =  countOnly(items, { 
+      "Jason": true, 
+      "Karima": true, 
+      "Fang": true, 
+      "Agouhanna": false });
+    assert.deepEqual(result1["Karima"], undefined);
+    assert.deepEqual(result1["Agouhana"], undefined);
   });
 });
