@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
-  "version": "1.0.0",
-  "description": "lotide project",
+  "name": "@sselinatoledo/lotide",
+  "version": "1.0.1",
+  "description": "lotide project: a collection of useful and reusable functions for JavaScript development.",
   "main": "assertEqual.js",
   "directories": {
     "test": "test"
@@ -19,7 +19,7 @@
     "type": "git",
     "url": "git+https://github.com/sselinatoledo/lotide.git"
   },
-  "author": "Selina Toledo",
+  "author": "Selina Toledo sselinatoledo@gmail.com",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/sselinatoledo/lotide/issues"
