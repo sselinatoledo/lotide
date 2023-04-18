@@ -25,4 +25,3 @@ const countLetters = function(word) {
   return result;
 };
 module.exports = countLetters;
-
