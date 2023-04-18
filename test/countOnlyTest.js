@@ -31,7 +31,7 @@ const countOnly = require('../countOnly');
 
 // MOCHA AND CHAI TESTING
 //describe countOnly function using describe function
-describe("countOnly function", () => {
+describe("countOnly function", function() {
   it("returns Jason: 1 === 1 && Fang: 2 === 2", function() {
     const items = [
       "Karl",
