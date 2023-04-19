@@ -4,6 +4,7 @@ const assert = require('chai').assert;
 // import eqObjects function.
 const eqObjects = require('../eqObjects');
 
+// TEST CODE
 describe("eqObjects function", () => {
   it("returns true === true for the same primitive values", () => {
     assert.deepEqual(eqObjects({color: 'red', size: 'medium'}, {size: 'medium', color: 'red'}), true);
