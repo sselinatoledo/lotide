@@ -12,7 +12,7 @@ const findKeyByValue = function(object, value) {
     }
   }
 
-  // if the loop completes, and without finding a match, return undefined
+  // if the loop completes and without finding a match, return undefined.
   return undefined;
 };
 
