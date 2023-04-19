@@ -2,7 +2,7 @@
   "name": "@sselinatoledo/lotide",
   "version": "1.0.1",
   "description": "lotide project: a collection of useful and reusable functions for JavaScript development.",
-  "main": "assertEqual.js",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
