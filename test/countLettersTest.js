@@ -4,6 +4,7 @@ const assert = require('chai').assert;
 // import countLetters function.
 const countLetters = require('../countLetters');
 
+// TEST CODE
 describe("countLetters function", () => {
   it("returns the count when accessing the letter in the string", () => {
     assert.deepEqual(countLetters("lighthouse in the house")["h"], 4);
