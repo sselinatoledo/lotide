@@ -1,7 +1,7 @@
 // import assertEqual function.
 const assertEqual = require('../assertEqual');
 
-// TEST CODE
+// TEST CODE 
 assertEqual("Lighthouse Labs", "Bootcamp"); // failed! non-identical strings
 assertEqual(1, 1); // passed! identical numbers
 assertEqual("JavaScript", "JavaScript"); // passed! identical strings
