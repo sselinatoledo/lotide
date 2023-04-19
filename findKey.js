@@ -4,13 +4,13 @@ const findKey = function(object, callback) {
   // loop through each key in the object.
   for (let key in object) {
 
-    // if callback function is true then return the current key.
+    // if callback function is true and found then return the current key.
     if (callback(object[key])) {
       return key;
     }
   }
 
-  // otherwise if it is false, no key is found then return undefined.
+  // otherwise if no key is found then return undefined.
   return undefined;
 };
 
