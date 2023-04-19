@@ -1,18 +1,14 @@
-// const sum = function(a, b) {
-//   return a * b;
-// }
-
-// console.assert(sum(1, 2) === 3);
-// console.assert(sum(1, 20) === 21);
-
-// FUNCTION IMPLEMENTATION
+// function that takes in 2 values and returns false if they are not equal and true otherwise.
 const assertEqual = function(actual, expected) {
-  if (actual !== expected) {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
+  
+  // conditional statement that tells if 2 values are equal or not.
+  if (actual === expected) {
+    console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
   } else {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
+    console.log(`🛑 Assertion Failed: ${actual} !== ${expected}`);
   }
 };
-// passing variable assertEqual (which points to our function). And not calling it.
+
+// export function assertEqual.
 module.exports = assertEqual;
-                                                  
+
