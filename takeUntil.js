@@ -1,18 +1,19 @@
-// 1. create an empty array to store the items we want to keep from the original array.
-// 2. loop throufgh each item in the array.
-// 3. for each item - we check if the callback returns a truth value by passing the item to the callback
-
-// IMPLEMENTATION
+// function that takes in an array and callback and returns a slice of the array based on the criteria specified in the callback.
 const takeUntil = function(array, callback) {
+
+  // create an empty array to store the result.
   const result = [];
-  for (let item of array) {
-    // you want the falsy to be your output
-    if (!callback(item)) {
-      result.push(item);
-    } else {
+
+  // loop through for each element of the array.
+  for (let element of array) {
+
+    // if the callback is true return result.
+    if (callback(element)) {
       return result;
     }
+    result.push(element);
   }
-  return result;
 };
+
+// export takeUntil function.
 module.exports = takeUntil;
