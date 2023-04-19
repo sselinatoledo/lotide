@@ -1,27 +1,30 @@
-// function that takes the sentence as a string
-// object that return a count of each of the letter in the sentence
-
-// 1. set up a function called countLetters. that takes a word as a parameter.
-// 2. initialize an empty object.
-// 3. create a for of loop that repeat through the elements. accessing the elements.
-// 4. check if the current index is a space. if it is, skip and continue to the next index.
-// 5. if and else => this is for the key and value output.
-// 6. check if the current index is not a key yet in the object. if it is not, make that a key and value equals to 1.
-// 7. Otherwise, incrememnt(add it to the existing value 1 if it is repeated).
-
-// SOLUTION
-const countLetters = function(word) {
+// function that takes in a sentence and returns a count of each of the letters in the sentence.
+const countLetters = function(string) {
+  
+  // store the count of each letter.
   const result = {};
-  for (let letter of word) {
+  
+  // loop through each of the letters in the sentence.
+  for (let letter of string) {
+    
+    // conditional if statement that will not count the spaces in the sentence.
     if (letter === " ") {
       continue;
     }
-    if (!result[letter]) {
-      result[letter] = 1;
-    } else {
+    
+    // conditional if statement that puts a value of 1 to each letter if its not yet encountered in the sentence.
+    if (result[letter]) {
       result[letter] += 1;
+    
+    // Otherwise, else statement that increments the count of each letter as we encounter each letter in the sentence.
+    } else {
+      result[letter] = 1;
     }
   }
+
+  // return the result object.
   return result;
 };
+
+// export function countLetters.
 module.exports = countLetters;
