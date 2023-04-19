@@ -1,26 +1,14 @@
-// // test tailTest.js
-// const tail = require('../tail');
-
-// // test assertEqualTest.js
-// const assertEqual = require('../assertEqual');
-
-// // TEST CODE 1
-// const result = tail(["Hello", "Lighthouse", "Labs"]);
-// assertEqual(result, ["Lighthouse", "Labs"]); // => will always fail! it is not comparing each value inside the array. you cannot compare the array as whole array. hence, it is always failed!
-
-// // TEST CODE 2
-// const words = ["Yo Yo", "Lighthouse", "Labs"];
-// tail(words);
-// assertEqual(words.length, 3); // will passed!
-
+//import assert library from chai package.
 const assert = require('chai').assert;
+
+// import tail function.
 const tail   = require('../tail');
 
-describe('#tail', function() {
-  it('should return ["Lighthouse", "Labs"] for ["Hello", "Lighthouse", "Labs"]', function() {
+describe('#tail', () => {
+  it('should return ["Lighthouse", "Labs"] for ["Hello", "Lighthouse", "Labs"]', () => {
     assert.deepEqual(tail(["Hello", "Lighthouse", "Labs"]), ["Lighthouse", "Labs"]);
   });
-  it('cannot modify the original array', function() {
+  it('cannot modify the original array', () => {
     const words = ["Yo Yo", "Lighthouse", "Labs"];
     tail(words);
     assert.deepEqual(words, (["Yo Yo", "Lighthouse", "Labs"]));
