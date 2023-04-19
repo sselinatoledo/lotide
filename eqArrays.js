@@ -23,7 +23,7 @@ const eqArrays = function(arr1, arr2) {
     }
   }
 
-  // Happy path.
+  // return true, happy path.
   return true;
 };
 
