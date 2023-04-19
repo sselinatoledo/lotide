@@ -36,7 +36,7 @@ const eqObjects = function(object1, object2) {
     }
   }
 
-  // happy path.
+  // return true, happy path.
   return true;
 };
 
