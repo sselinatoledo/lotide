@@ -1,21 +1,19 @@
-// .map() pass a callback function that takes the parameter as an argument and getting the length of the each element of the array.
-// an array to map
-// a callback function
-
-/*
-PSEUDOCODE
-  1. an array of strings called words. contains 5 elements.
-  2. higher order function called map. takes 2 parameters (array, callback).
-  3. you want a different output from the given array, so create an empty array.
-  4. loop through each element of the array.
-  5. call the second parameter
-*/
-
+// function that takes in an array and a callback and returns a new array based on the results of the callback on each item in the array.
 const map = function(array, callback) {
+
+  // store the results of callback function.
   const results = [];
+
+  // loop through for each element of the array.
   for (let item of array) {
+
+    // call the function on each element and push the results in the empty array.
     results.push(callback(item));
   }
+
+  // return the result array.
   return results;
 };
+
+// export map function.
 module.exports = map;
