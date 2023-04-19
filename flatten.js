@@ -13,7 +13,7 @@ const flatten = function(nested) {
       // concatenate the array and putting it as the newArray.
       newArray = newArray.concat(flatten(i));
 
-      // otherwise, use push method to push the element inside the buffer if the array is not a nested array.
+      // otherwise, push method to push the element inside the buffer if the array is not a nested array.
     } else {
       newArray.push(i);
     }
