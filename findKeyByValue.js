@@ -1,19 +1,20 @@
-// INSTRUCTIONS:
-// should scan the object and return the first key which contains the given value.
-// if no key with that given value is found, then return undefined
-
-// CODE:
-// implement the function findKeyByValue. which takes in an object and a value.
+// function that takes in an object and a value and returns the first key that corresponds to that value.
 const findKeyByValue = function(object, value) {
-  // for each key in the object. this is the loop in order to access the properties of an object.
+
+  // loop through for each key in the object in order to access the properties of an object.
   for (let key in object) {
+
     // check if the value of the current key = to the given value.
     if (object[key] === value) {
-      //if it is, return the key.
+
+      // if it is, return the key.
       return key;
     }
   }
+
   // if the loop completes, and without finding a match, return undefined
   return undefined;
 };
+
+// export findKeyByValue function.
 module.exports = findKeyByValue;
