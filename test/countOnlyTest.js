@@ -4,6 +4,7 @@ const assert = require('chai').assert;
 // import countOnly function.
 const countOnly = require('../countOnly');
 
+// TEST CODE
 describe("countOnly function", () => {
   it("returns Jason: 1 === 1", () => {
     const items = [
