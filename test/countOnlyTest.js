@@ -6,7 +6,7 @@ const countOnly = require('../countOnly');
 
 // TEST CODE
 describe("countOnly function", () => {
-  it("returns Jason: 1 === 1", () => {
+  it("returns the correct count for specified items in the array", () => {
     const items = [
       "Karl",
       "Salima",
@@ -25,7 +25,7 @@ describe("countOnly function", () => {
       "Agouhanna": false });
     assert.deepEqual(result["Jason"], 1);
   });
-  it("returns Karima: undefined === undefined", () => {
+  it("returns undefined for an item that is not present in the object", () => {
     const items = [
       "Karl",
       "Salima",
