@@ -5,19 +5,15 @@ const assert = require('chai').assert;
 const middle = require('../middle');
 
 describe('#middle', () => {
-  it('returns [] for input [1]', () => {
+  it('returns [] when array has only 1 or 2 length', () => {
     assert.deepEqual(middle([1]), []);
-  });
-  it('returns [] for input [1, 2]', () => {
     assert.deepEqual(middle([1, 2]), []);
   });
-  it('returns [2] for input [1, 2, 3]', () => {
+  it("returns one middle element when array has odd length", () => {
     assert.deepEqual(middle([1, 2, 3]), [2]);
   });
-  it('returns [2, 3] for input [1, 2, 3, 4]', () => {
+  it("returns two middle elements when array has even length", () => {
     assert.deepEqual(middle([1, 2, 3, 4]), [2, 3]);
-  });
-  it('returns [3, 4] for input [1, 2, 3, 4, 5, 6]', () => {
     assert.deepEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]);
   });
 });
