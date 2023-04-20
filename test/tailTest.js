@@ -5,10 +5,10 @@ const assert = require('chai').assert;
 const tail   = require('../tail');
 
 describe('#tail', () => {
-  it('should return ["Lighthouse", "Labs"] for ["Hello", "Lighthouse", "Labs"]', () => {
+  it("returns a new array containing all elements of the array except for the first one", () => {
     assert.deepEqual(tail(["Hello", "Lighthouse", "Labs"]), ["Lighthouse", "Labs"]);
   });
-  it('cannot modify the original array', () => {
+  it("should not modify the original array when called an array", () => {
     const words = ["Yo Yo", "Lighthouse", "Labs"];
     tail(words);
     assert.deepEqual(words, (["Yo Yo", "Lighthouse", "Labs"]));
