@@ -5,7 +5,7 @@ const assert = require('chai').assert;
 const findKeyByValue = require('../findKeyByValue');
 
 describe("findKeyByValue function", () => {
-  it("returns drama === drama for 'The Wire'", () => {
+  it("returns the first key that matches the value", () => {
     const bestTVShowsByGenre = {
       sciFi: "The Expanse",
       comedy: "Brooklyn Nine-Nine",
@@ -13,7 +13,7 @@ describe("findKeyByValue function", () => {
     };
     assert.deepEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
   });
-  it("returns undefined === undefined for 'That '70s Show'", () => {
+  it("returns undefined when the value is not found", () => {
     const bestTVShowsByGenre = {
       sciFi: "The Expanse",
       comedy: "Brooklyn Nine-Nine",
