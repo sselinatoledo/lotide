@@ -6,19 +6,19 @@ const eqArrays = require('../eqArrays');
 
 // TEST CODE
 describe("eqArrays function", () => {
-  it("returns true for [1, 2, 3] === [1, 2, 3]", () => {
+  it("returns true when comparing identical arrays", () => {
     assert.deepEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
   });
-  it("returns true for ['1', '2', '3'] === ['1', '2', '3']", () => {
-    assert.deepEqual(eqArrays(['1', '2', '3'], ['1', '2', '3']), true);
+  it("returns true when comparing empty arrays", () => {
+    assert.deepEqual(eqArrays([], []), true);
   });
-  it("returns false for [1, 2, 3] === [1, 2, 3, 4]", () => {
+  it("returns false when comparing arrays with different lengths", () => {
     assert.deepEqual(eqArrays([1, 2, 3], [1, 2, 3, 4]), false);
   });
-  it("returns false for [1, 2, 3] === [3, 2, 1]", () => {
-    assert.deepEqual(eqArrays([1, 2, 3], [1, 2, 3, 4]), false);
+  it("returns false when comparing arrays with different values", () => {
+    assert.deepEqual(eqArrays([1, 2, 3], [3, 2, 1]), false);
   });
-  it("returns false for ['1', '2', '3'] === ['1', '2', 3]", () => {
+  it("returns false when comparing arrays with different types", () => {
     assert.deepEqual(eqArrays(['1', '2', '3'], ['1', '2', 3]), false);
   });
 });
