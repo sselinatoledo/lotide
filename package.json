@@ -1,6 +1,6 @@
 {
   "name": "@sselinatoledo/lotide",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "lotide project: a collection of useful and reusable functions for JavaScript development.",
   "main": "index.js",
   "directories": {
