@@ -10,7 +10,7 @@ describe("without function", () => {
     without(["1", "2", "3"], [1, 2, "3"]);
     assert.deepEqual([1, 2], [1, 2]);
   });
-  it("returns hello,world,lighthouse === hello,world,lighthouse for without(['hello', 'world', 'lighthouse'])", () => {
+  it("returns true when comparing ['hello', 'world', 'lighthouse'] with the ['lighthouse'] ", () => {
     const words = ["hello", "world", "lighthouse"];
     without(words, ["lighthouse"]);
     assert.deepEqual(words, ["hello", "world", "lighthouse"]);
