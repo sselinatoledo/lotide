@@ -5,7 +5,7 @@ const assert = require('chai').assert;
 const findKey = require('../findKey');
 
 describe("findKey function", () => {
-  it("returns noma === noma", () => {
+  it("returns the key corresponding to the object value", () => {
     const answer = findKey({
       "Blue Hill": { stars: 1 },
       "Akaleri": { stars: 3 },
